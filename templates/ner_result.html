@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NER Results</title>
+</head>
+<body>
+    <h1>NER Results</h1>
+    <p><strong>Input Text:</strong> {{ text }}</p>
+
+    {% if entities %}
+        <h3>Named Entities Found:</h3>
+        <ul>
+            {% for entity in entities %}
+                <li><strong>{{ entity.text }}</strong> → {{ entity.label }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No entities found.</p>
+    {% endif %}
+
+    <a href="/ner">Try Another Text</a>
+</body>
+</html>

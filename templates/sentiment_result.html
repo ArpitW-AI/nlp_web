@@ -1,0 +1,84 @@
+<!-- templates/sentiment_result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Result</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .result-box {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .emoji {
+            font-size: 48px;
+            text-align: center;
+        }
+
+        .score {
+            font-size: 20px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .text {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+            font-style: italic;
+            margin-top: 15px;
+        }
+
+        .message {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            text-decoration: none;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="result-box">
+    <div class="emoji">{{ emoji }}</div>
+    <div class="score">
+        <p><strong>Polarity:</strong> {{ polarity }}</p>
+        <p><strong>Subjectivity:</strong> {{ subjectivity }}</p>
+    </div>
+
+    <div class="text">
+        "{{ input_text }}"
+    </div>
+
+    <div class="message">{{ message }}</div>
+
+    <div style="text-align: center;">
+        <a href="/sentiment">Analyze Another</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            margin: auto;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #2d89ef;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #1b5fbd;
+        }
+        p {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>NLP APP</h1>
+
+    <h3>Register Here</h3>
+
+    {% if message %}
+    <p style="color:red"> {{message}} </p>
+    {% endif %}
+
+
+    <form action="/perform_registration" method="post">
+        <label>Name</label><br>
+        <input type="text" name="name" required><br>
+
+        <label>Email</label><br>
+        <input type="email" name="email" required><br>
+
+        <label>Password</label><br>
+        <input type="password" name="password" required><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <p>Already a Member? <a href="/">login Here</a></p>
+
+</body>
+</html>

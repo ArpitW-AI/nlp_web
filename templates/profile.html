@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f7;
+            margin: 0;
+            padding: 50px 20px;
+            color: #333;
+        }
+
+        .container {
+            background-color: #fff;
+            max-width: 600px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 20px 0;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: #3498db;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 12px 20px;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .emoji {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>👋 Welcome to Your NLP Toolkit</h1>
+    <p>Choose one of the following NLP tasks to begin:</p>
+
+    <ul>
+        <li><a href="/ner"><span class="emoji">🧠</span> Named Entity Recognition (NER)</a></li>
+        <li><a href="/sentiment"><span class="emoji">😊</span> Sentiment Analysis</a></li>
+        <li><a href="/keywords"><span class="emoji">🔍</span> Keyword Extractor</a></li>
+    </ul>
+</div>
+
+</body>
+</html>

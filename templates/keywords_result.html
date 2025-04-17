@@ -1,0 +1,54 @@
+<!-- templates/keywords_result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Keyword Result</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .keywords {
+            margin-top: 20px;
+        }
+
+        .keyword {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Extracted Keywords</h2>
+    <p><i>"{{ input_text }}"</i></p>
+
+    <div class="keywords">
+        {% for kw in keywords %}
+            <span class="keyword">{{ kw }}</span>
+        {% endfor %}
+    </div>
+
+    <br><br>
+    <a href="/keywords">Try Another</a>
+</div>
+
+</body>
+</html>
