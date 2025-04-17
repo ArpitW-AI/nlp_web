@@ -24,8 +24,4 @@ This is a simple yet powerful **Natural Language Processing (NLP)** web app buil
 - **NLP Libraries**: spaCy, TextBlob, RAKE-NLTK  
 - **Frontend**: HTML5, CSS3 (inline styling for simplicity)
 
----
 
-## 📂 Project Structure
-
-. 
